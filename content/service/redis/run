@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Run redis
+exec 2>&1
+exec redis-server --port 61801

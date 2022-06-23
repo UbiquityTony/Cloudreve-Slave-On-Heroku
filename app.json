@@ -1,0 +1,11 @@
+{
+	"name": "Cloudreve-slave-on-Heroku",
+	"description": "Deploy Cloudreve slave node on Heroku.",
+	"env": {
+		"Secret": {
+			"description": "通信密钥, 从Cloudreve主机添加节点设置向导处获取。",
+			"value": "1234567891234567123456789123456712345"
+		}
+	},
+	"stack": "container"
+}
