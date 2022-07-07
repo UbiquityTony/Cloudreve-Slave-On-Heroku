@@ -10,10 +10,8 @@
   
 ## 部署方式
 
- **推荐使用本仓库直接部署**  
-
  1. 浏览器登陆heroku后，访问<https://dashboard.heroku.com/new?template=https://github.com/UbiquityTony/Cloudreve-Slave-On-Heroku> 进行部署。
  2. 首先打开Cloudreve主机管理面板———离线下载节点，点接入新节点进入向导。
  3. 将从机密钥填入Heroku安装向导。
- 4. Heroku完成部署后，将Heroku APP域名填入从机地址，Aria2 RPC服务地址为<http://127.0.0.1:61800> ，RPC密钥为空白。
+ 4. Heroku完成部署后，将Heroku APP域名填入从机地址，Aria2 RPC服务地址为<http://127.0.0.1:61800> ，下载路径为 /data/downloads ，RPC密钥为空白。
  5. 每次部署会采用Cloudreve最新版本。
