@@ -10,7 +10,7 @@
   
 ## 部署方式
 
- **请勿使用本仓库直接部署**  
+ **推荐使用本仓库直接部署**  
 
  1. 浏览器登陆heroku后，访问<https://dashboard.heroku.com/new?template=https://github.com/UbiquityTony/Cloudreve-Slave-On-Heroku> 进行部署。
  2. 首先打开Cloudreve主机管理面板———离线下载节点，点接入新节点进入向导。
