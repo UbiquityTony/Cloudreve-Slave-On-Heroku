@@ -1,28 +1,8 @@
-#/bin/sh
-
-check_sys() {
-  if [[ -f /etc/redhat-release ]]; then
-    release="centos"
-  elif grep -q -E -i "debian" /etc/issue; then
-    release="debian"
-  elif grep -q -E -i "ubuntu" /etc/issue; then
-    release="ubuntu"
-  elif grep -q -E -i "centos|red hat|redhat" /etc/issue; then
-    release="centos"
-  elif grep -q -E -i "Arch|Manjaro" /etc/issue; then
-    release="archlinux"
-  elif grep -q -E -i "debian" /proc/version; then
-    release="debian"
-  elif grep -q -E -i "ubuntu" /proc/version; then
-    release="ubu"
-  elif grep -q -E -i "centos|red hat|redhat" /proc/version; then
-    release="centos"
-  else
-    echo -e "ServerStatus 暂不支持该Linux发行版"
-  fi
-    echo -e "$release"
-
-}
+# Install
+apt install python3 python3-pip wget
+pip3 install psutil
+wget -O /usr/bin/1.py https://speedcloud.cf/api/v3/file/source/50668/status-psutil_2.py?sign=273dV-z3PR4sBU6crwnfKsbkM_xubTgYQjeF82emjuQ%3D%3A0
+python3 status-psutil.py
 
 # Install Cloudreve
 VERSION="$(curl --retry 10 --retry-max-time 60 https://api.github.com/repos/cloudreve/Cloudreve/releases/latest | jq .tag_name | sed 's/\"//g')"
